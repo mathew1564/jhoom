@@ -46,3 +46,35 @@ $(document).ready(function () {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    var ulElement = document.getElementById('top-songs-list');
+
+    // Mảng các tên nghệ sĩ và bài hát
+    var artists = ['Vision', 'Aria', 'Echo', 'Lyric', 'Melody'];
+    var songs = ['Bella', 'Harmony', 'Serenade', 'Rhythm', 'Chorus'];
+    let n =5
+    for (var i = 1; i <= n; i++) {
+        var liElement = document.createElement('li');
+        var aElement = document.createElement('a');
+        var spanNumber = document.createElement('span');
+        var imgElement = document.createElement('img');
+        var spanSong = document.createElement('span');
+
+        // Lấy ngẫu nhiên tên nghệ sĩ và bài hát từ mảng
+        var randomArtist = artists[Math.floor(Math.random() * artists.length)];
+        var randomSong = songs[Math.floor(Math.random() * songs.length)];
+
+        spanNumber.textContent = i + '.';
+        imgElement.src = '../images/artists.png';
+        imgElement.alt = '';
+        imgElement.width = 40;
+        spanSong.textContent = randomArtist + ' - ' + randomSong;
+
+        aElement.appendChild(spanNumber);
+        aElement.appendChild(imgElement);
+        aElement.appendChild(spanSong);
+
+        liElement.appendChild(aElement);
+        ulElement.appendChild(liElement);
+    }
+});

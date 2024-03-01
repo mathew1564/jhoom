@@ -7,4 +7,78 @@
     background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
     
 }
-
+/* Home=========================================== */
+/* nav and menu */
+.background-main {
+    background-color: #2d2d2d;
+  }
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .menu-nav li {
+    list-style: none;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .menu-nav li a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    gap: 1rem;
+  }
+  .menu-nav li a:hover {
+    color: #17a700;
+  }
+  /* Carousel */
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+  /* Search */
+  .form-control {
+    background: none; /* Màu nền trong suốt */
+    border: none;
+    color: white;
+  }
+  .form-control::placeholder {
+    color: #ffffff80; /* Set placeholder text color */
+  }
+  .form-search {
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+  }
+  .form-search:focus {
+    background-color: #fffff100;
+    color: #fff;
+  }
+  .card img {
+    object-fit: cover !important;
+  }
+  .top-song {
+    border-radius: 10px;
+    background: #161616;
+    width: 456px;
+    height: 509px;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+  .list-top-songs li {
+    list-style: none;
+  }
+  .list-top-songs li a {
+    margin-top: 45px;
+    text-decoration: none;
+    color: #fff !important;
+    font-size: 22px;
+    display: flex;
+    gap: 1rem;
+  }
+  .list-top-songs li a img {
+    border-radius: 2px;
+    object-fit: cover;
+  }
+  
