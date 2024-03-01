@@ -8,3 +8,20 @@
     
 }
 
+.login-body {
+    width: 60%;
+     height: 800px; 
+     background-color: aliceblue;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .card-infor {
+        display: none!important;
+    }
+    .show-logo {
+        display: block!important;
+    }
+}
+
+

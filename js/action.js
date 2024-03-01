@@ -45,4 +45,22 @@ $(document).ready(function () {
             $("#showPassError").removeClass("d-none");
         }
     });
+
+    $("#validationCustom02").on("input", function (event) {
+        if ($("#validationCustom02").val().length > 0) {
+            $("#validationCustom02").removeClass("was-invalid ");
+            $("#showPassError").addClass("d-none");
+        }
+    });
+
+    $("#eye-show").click(() => {
+        $("#validationCustom02").attr("type", "text");
+        $("#eye-show").addClass("d-none");
+        $("#eye-hide").removeClass("d-none");
+    });
+    $("#eye-hide").click(() => {
+        $("#validationCustom02").attr("type", "password");
+        $("#eye-show").removeClass("d-none");
+        $("#eye-hide").addClass("d-none");
+    });
 });
