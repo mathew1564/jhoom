@@ -1,102 +1,217 @@
 .was-invalid {
-    border-color: var(--bs-form-invalid-border-color);
-    padding-right: calc(1.5em + 0.75rem);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-    background-repeat : no-repeat;
-    background-position: right calc(0.375em + 0.1875rem) center;
-    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-    
+  border-color: var(--bs-form-invalid-border-color);
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
 .login-body {
-    width: 60%;
-     height: 800px; 
-     background-color: aliceblue;
+  width: 60%;
+  height: 800px;
+  background-color: aliceblue;
 }
-
 
 @media only screen and (max-width: 1200px) {
-    .card-infor {
-        display: none!important;
-    }
-    .show-logo {
-        display: block!important;
-    }
+  .card-infor {
+    display: none !important;
+  }
+  .show-logo {
+    display: block !important;
+  }
 }
-
 
 /* Home=========================================== */
 /* nav and menu */
-.background-main {
-    background-color: #2d2d2d;
-  }
-  .menu-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .menu-nav li {
-    list-style: none;
-    display: flex;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-  }
-  .menu-nav li a {
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    gap: 1rem;
-  }
-  .menu-nav li a:hover {
-    color: #17a700;
-  }
-  /* Carousel */
-  .carousel-item img {
-    height: 400px;
-    object-fit: cover;
-  }
-  /* Search */
-  .form-control {
-    background: none; /* Màu nền trong suốt */
-    border: none;
-    color: white;
-  }
-  .form-control::placeholder {
-    color: #ffffff80; /* Set placeholder text color */
-  }
-  .form-search {
-    border-bottom: 1px solid gray;
-    border-radius: 0;
-  }
-  .form-search:focus {
-    background-color: #fffff100;
-    color: #fff;
-  }
-  .card img {
-    object-fit: cover !important;
-  }
-  .top-song {
-    border-radius: 10px;
-    background: #161616;
-    width: 456px;
-    height: 509px;
-    flex-shrink: 0;
-    overflow-y: auto;
-  }
-  .list-top-songs li {
-    list-style: none;
-  }
-  .list-top-songs li a {
-    margin-top: 45px;
-    text-decoration: none;
-    color: #fff !important;
-    font-size: 22px;
-    display: flex;
-    gap: 1rem;
-  }
-  .list-top-songs li a img {
-    border-radius: 2px;
-    object-fit: cover;
+body {
+  background-color: #2d2d2d;
+}
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.menu-nav li {
+  list-style: none;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+.menu-nav li a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  gap: 1rem;
+}
+.menu-nav li a:hover {
+  color: #17a700;
+}
+/* Carousel */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+}
+/* Search */
+.form-control {
+  background: none; /* Màu nền trong suốt */
+  border: none;
+  color: white;
+}
+.form-control::placeholder {
+  color: #ffffff80; /* Set placeholder text color */
+}
+.form-search {
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+}
+.form-search:focus {
+  background-color: #fffff100;
+  color: #fff;
+}
+.card-main{
+  transform: translateY(0);
+}
+.card-main:hover{
+    transform: translateY(-5px);
+    transition: all linear 0.2s;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    
+}
+.card-body h5:hover{
+    color: #17a700 !important;
+}
+.card img {
+  object-fit: cover !important;
+}
+.top-song {
+  border-radius: 10px;
+  background: #161616;
+  width: 100%;
+  height: 600px;
+  flex-shrink: 0;
+  padding: 1rem;
+   overflow: auto;
+
+}
+.top-song::-webkit-scrollbar {
+    width: 16px;
   }
   
+  .top-song::-webkit-scrollbar-track {
+    background-color: #161616;
+    border-radius: 100px;
+  }
+  
+  .top-song::-webkit-scrollbar-thumb {
+    background-color: #222020;
+    border-radius: 100px;
+  }
+.list-top-songs li {
+  list-style: none;
+}
+.list-top-songs li a {
+  margin-top: 45px;
+  text-decoration: none;
+  color: #fff !important;
+  font-size: 22px;
+  display: flex;
+  gap: 1rem;
+}
+.list-top-songs li a img {
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+ .menu-icon-md{
+    display: none;
+}
+ .menu-logo-md{
+    display: none;
+}
+.table-playlist tr th{
+    background-color: #2D2D2D;
+    color: #fff;
+    /* text-align: center; */
+}
+.table-playlist tr td{
+    background-color: #2D2D2D;
+    color: #fff;
+    /* text-align: center; */
+}
+/* CSS cho popup */
+.popup {
+    z-index: 99;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+  }
+/* Reponsive */
+@media only screen and (max-width: 1024px) {
+  
+    .carousel1{
+        padding: 0;
+        min-width: 100vw;
+    }
+    div {
+        background-color: red;
+    }
+    .silde-bar{
+        display: none;
+    }
+    .remove-element{
+        display: none;
+    }
+     .img-logo{
+        display: none;
+    }
+     .menu-icon-md{
+        display: block;
+        cursor: pointer;
+    }
+     .menu-logo-md{
+        display: block;
+    }
+    .main-content{
+        min-width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div {
+        background-color: blue;
+    }
+   
+}
+
+@media only screen and (max-width: 640px) {
+    div {
+        background-color: yellow;
+    }
+    .carousel1{
+      display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    div {
+        background-color: pink;
+    }
+}

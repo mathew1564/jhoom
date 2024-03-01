@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mảng các tên nghệ sĩ và bài hát
     var artists = ['Vision', 'Aria', 'Echo', 'Lyric', 'Melody'];
     var songs = ['Bella', 'Harmony', 'Serenade', 'Rhythm', 'Chorus'];
-    let n =5
+    let n =10
     for (var i = 1; i <= n; i++) {
         var liElement = document.createElement('li');
         var aElement = document.createElement('a');
@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         imgElement.width = 40;
         spanSong.textContent = randomArtist + ' - ' + randomSong;
 
+        aElement.href='../Home.html';
         aElement.appendChild(spanNumber);
         aElement.appendChild(imgElement);
         aElement.appendChild(spanSong);
@@ -95,4 +96,22 @@ document.addEventListener('DOMContentLoaded', function() {
         liElement.appendChild(aElement);
         ulElement.appendChild(liElement);
     }
+  
 });
+document.getElementById('isLogout').addEventListener('click', function(event) {
+    event.preventDefault(); 
+  
+    // Hiển thị popup khi nhấn Logout
+    document.getElementById('logoutPopup').style.display = 'block';
+  });
+  
+  document.getElementById('confirmLogout').addEventListener('click', function() {
+    // Điều hướng ngược lại nếu người dùng đồng ý
+    window.location.href = './index.html';
+  });
+  
+  document.getElementById('cancelLogout').addEventListener('click', function() {
+    // Tắt popup nếu người dùng hủy bỏ
+    document.getElementById('logoutPopup').style.display = 'none';
+  });
+  
