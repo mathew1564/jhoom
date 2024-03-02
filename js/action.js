@@ -80,9 +80,11 @@ $(document).ready(function () {
     const loadTrack = (id) => {
         clearInterval(updateTimer);
         reset();
-        pauseTrack();
-        var item = topSongs.filter((a) => a.id === id)[0];
 
+        pauseTrack();
+        var item = topSongs.filter((a) => a.id == id)[0];
+        console.log(topSongs.filter((a) => a.id == id));
+        console.log(id);
         curr_track.src = "../audio/" + item.audio;
         $(".image-song").attr("src", "../images/" + item.image);
         $(".name-song").html(item.title);
@@ -90,7 +92,7 @@ $(document).ready(function () {
         curr_track.load();
 
         updateTimer = setInterval(setUpdate, 1000);
-        playTrack;
+        playTrack();
         curr_track.addEventListener("ended", nextTrack);
     };
 
@@ -245,11 +247,48 @@ $(document).ready(function () {
         var id = parentElement.attr("id");
         alert(id);
     });
+    artists.map((item) => {
+        $(".artirst").append(`  <div class="col-3 pointer">
+        <div class="card h-70" style="background-color: black !important; border: none;">
+            <img src="../images/${item.image}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-light">${item.title}</h5>
+                <p class="card-text" style="color: gray;">${item.sub_title}</p>
+            </div>
+        </div>
+    </div>`);
+    });
+
+    topSongs.map((item) => {
+        $(".body-playlist")
+            .append(`  <tr class='pointer playlist-song' id="${item.id} ">
+        <td>
+            <img src="../images/${item.image}"
+                    alt="" width="50" style="border-radius: 5px; ">
+                <span class='ms-2'>${item.title}</span> 
+
+        </td>
+        <td>Chemical Reaction</td>
+        <td>3:10</td>
+        <td><i class="fa fa-heart" style="color: red; font-size: 24px;"></i></td>
+   
+    </tr>`);
+    });
+
+    $(".playlist-song").click((event) => {
+        var parentElement = $(event.target).closest(".playlist-song");
+        var id = parentElement.attr("id");
+        loadTrack(id);
+        $(".play-music").removeClass("d-none");
+    });
 });
-import { topSongs } from "../js/data.js";
-import { albums } from "../js/data.js";
+import { topSongs, albums, artists } from "../js/data.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     var ulElement = document.getElementById("top-songs-list");
+    if (!ulElement) {
+        ulElement = document.createElement("ul");
+    }
     topSongs.forEach((item) => {
         var liElement = document.createElement("li");
         var aElement = document.createElement("div");
@@ -267,4 +306,20 @@ document.addEventListener("DOMContentLoaded", function () {
         liElement.appendChild(aElement);
         ulElement.appendChild(liElement);
     });
+});
+document.getElementById("isLogout").addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // Hiển thị popup khi nhấn Logout
+    document.getElementById("logoutPopup").style.display = "block";
+});
+
+document.getElementById("confirmLogout").addEventListener("click", function () {
+    // Điều hướng ngược lại nếu người dùng đồng ý
+    window.location.href = "./index.html";
+});
+
+document.getElementById("cancelLogout").addEventListener("click", function () {
+    // Tắt popup nếu người dùng hủy bỏ
+    document.getElementById("logoutPopup").style.display = "none";
 });
