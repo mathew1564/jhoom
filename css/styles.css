@@ -20,8 +20,49 @@
         display: none!important;
     }
     .show-logo {
-        display: block!important;
+        display:
+         block!important;
     }
+    .volume {
+      display: none!important;;
+    }
+}
+
+@media only screen and (max-width: 1000px) { 
+  .image-song {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 30px!important;
+  }
+  .name-song {
+    font-size: medium!important;
+    
+  }
+  .author-song {
+    font-size: small!important;
+  }
+}
+@media only screen and (max-width: 768px) { 
+  .image-song {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 30px!important;
+  }
+  .name-song {
+    font-size: medium!important;
+    
+  }
+  .author-song {
+    font-size: small!important;
+  }
+}
+
+@media only screen and (max-width: 576px) { 
+  .author-infor {
+    justify-content: center!important;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 
@@ -57,17 +98,16 @@
     object-fit: cover;
   }
   /* Search */
-  .form-control {
-    background: none; /* Màu nền trong suốt */
-    border: none;
-    color: white;
-  }
+
   .form-control::placeholder {
     color: #ffffff80; /* Set placeholder text color */
   }
   .form-search {
-    border-bottom: 1px solid gray;
-    border-radius: 0;
+    background: none; /* Màu nền trong suốt */
+    border: none;
+    color: white;
+    border-bottom: 1px solid gray!important;
+    border-radius: 0!important;
   }
   .form-search:focus {
     background-color: #fffff100;
@@ -87,7 +127,7 @@
   .list-top-songs li {
     list-style: none;
   }
-  .list-top-songs li a {
+  .list-top-songs li div {
     margin-top: 45px;
     text-decoration: none;
     color: #fff !important;
@@ -95,8 +135,54 @@
     display: flex;
     gap: 1rem;
   }
-  .list-top-songs li a img {
+  .list-top-songs li div img {
     border-radius: 2px;
     object-fit: cover;
   }
   
+  .song-item {
+    cursor: pointer;
+  }
+  
+  .play-music {
+    background-color: #2b2828;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: #2b2828;
+  }
+.image-song {
+  border-radius: 2px;
+  object-fit: cover;
+  width: 70px;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb {
+  
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    cursor: grab;
+    border: 2px solid #17a700;
+    border-radius: 100%;
+}
+
+.seek_slider, .volume_slider {
+
+  appearance: none;
+  height: 5px;
+  background:  #17a700;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.seek_slider {
+  width: 70%;
+}
+
+.pointer {
+  cursor: pointer;
+}
