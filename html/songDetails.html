@@ -21,8 +21,8 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
-    <title>Playlist</title>
+
+    <title>Album</title>
 </head>
 
 <body>
@@ -135,97 +135,92 @@
                     </li>
                 </ul>
             </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-2 col-md-0 col-sm-0 col-0 remove-element"></div>
-                    <div class="col-lg-10" style="margin-top: 106px;">
-                        <img src="../images/banner1.jpg" alt="" class="w-100" style="height: 400px; object-fit: cover;">
-                        <div class="container-fluid mt-5 mb-5">
-                            <div class="row col-4">
-                                <div class="input-group ">
-                                    <span class="input-group-text" id="basic-addon1"
-                                        style="background-color: rgba(255, 255, 255, 0) ; border: none;"><i
-                                            class="fa fa-search text-light"></i></span>
-                                    <input type="text" class="form-control form-search " placeholder="Search">
-                                </div>
+        </section>
+        <div class="row" style=" margin-top: 130px;">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-10">
+                <div class="d-flex gap-5 align-items-center">
+                    <a href="./album.html" style="padding: 0;"><svg xmlns="http://www.w3.org/2000/svg" width="41"
+                            height="41" viewBox="0 0 41 41" fill="none" style="cursor: pointer;">
+                            <path
+                                d="M8.96875 19.2188H34.5938C34.9336 19.2188 35.2595 19.3537 35.4997 19.594C35.74 19.8343 35.875 20.1602 35.875 20.5C35.875 20.8398 35.74 21.1657 35.4997 21.406C35.2595 21.6463 34.9336 21.7812 34.5938 21.7812H8.96875C8.62894 21.7812 8.30305 21.6463 8.06277 21.406C7.82249 21.1657 7.6875 20.8398 7.6875 20.5C7.6875 20.1602 7.82249 19.8343 8.06277 19.594C8.30305 19.3537 8.62894 19.2188 8.96875 19.2188Z"
+                                fill="white" />
+                            <path
+                                d="M9.49952 20.5L20.1262 31.1241C20.3668 31.3647 20.502 31.691 20.502 32.0312C20.502 32.3715 20.3668 32.6978 20.1262 32.9384C19.8856 33.179 19.5593 33.3141 19.2191 33.3141C18.8788 33.3141 18.5525 33.179 18.312 32.9384L6.78071 21.4071C6.66139 21.2881 6.56673 21.1467 6.50214 20.9911C6.43754 20.8354 6.4043 20.6685 6.4043 20.5C6.4043 20.3315 6.43754 20.1646 6.50214 20.0089C6.56673 19.8533 6.66139 19.7119 6.78071 19.5929L18.312 8.06163C18.5525 7.82104 18.8788 7.68588 19.2191 7.68588C19.5593 7.68588 19.8856 7.82104 20.1262 8.06163C20.3668 8.30221 20.502 8.62851 20.502 8.96875C20.502 9.30899 20.3668 9.63529 20.1262 9.87588L9.49952 20.5Z"
+                                fill="white" />
+                        </svg> </a>
+
+                    <nav class="navbar  col-12 col-lg-4 col-md-6 col-sm-6 ">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"
+                                    style="background-color: rgba(255, 255, 255, 0) ; border: none;"><i
+                                        class="fa fa-search text-light"></i></span>
+                                <input type="text" class="form-control form-search " placeholder="Search">
+                            </div>
+                        </form>
+                    </nav>
+                </div>
+                <!-- INFO SONG -->
+                <div class="row mt-5">
+                    <div class="col-lg-4">
+
+                        <img src="../images/avatar-album-deatail.jpg" alt=".."
+                            style="object-fit: cover; border-radius: 5%; width: 50%; transform: translate(50%,0); margin-bottom: 20px;">
+                        <!-- <i class="fa fa-play-circle  play-music-album fa-3x"></i> -->
+
+                        <div class="media-content text-center " style="color: gray;">
+                            <div>
+                                <h3 class="text-light">V-Pop Tháng 3/2024</h3>
+                            </div>
+                            <div>
+                                <span> Update: </span><span>3/02/2024</span>
+                            </div>
+                            <div class="artirst1 ">
+                                <a href="" style="text-decoration: none; color: gray;">Nguyen Phi Long</a>
+                            </div>
+                            <div class="like">
+                                <span>30K like</span>
+                            </div>
+                            <i class="fa fa-heart fa-2x mt-3" style="color: #fcfcfc; cursor: pointer;" id="like1" onclick="changeColorLike()"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-light">
+                        <div class="d-flex " style="flex-direction: column; gap: 1rem;">
+                            
+                            <p>Information song</p>
+                            <div class="gap-5 d-flex">
+                                <span style="color: gray;">Release date :</span><span>01/03/2024</span>
+                            </div>
+                            <div class="gap-5 d-flex">
+                                <span style="color: gray;">Provided by :</span><span>JHOOM MUCSIC</span>
+                            </div>
+                            <div class="gap-5 d-flex">
+                                <span style="color: gray;">Lyrics :</span>
+                            </div>
+                            <div class="" style="width: 60%;">
+                                I have one feeling (been dreaming) <br>
+                                That you will finally comeI have that feeling (been dreaming) <br>
+                                And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh <br>
+                                 I wanna have that feelingOoh to be the only one for youI have been waiting (praying) <br>
+                                 For you to finally showI have been waiting (praying) <br>
+                                 And I'm know that I'm rightBaby just for youI gotta vision of you
                             </div>
                         </div>
-                        <table class="table table-borderless table-playlist ">
-                            <thead>
-                                <tr style="border-bottom:1px solid #4d4c4c ;">
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Album</th>
-                                    <th scope="col">Duration</th>
-                                    <th scope="col">Saved</th>
-                                </tr>
-                            </thead>
-                            <tbody class="body-playlist">
-                                
-                            </tbody>
-                        </table>
+
                     </div>
+                    <div class="col-lg-4">
+                        <div class="top-song p-3 ">
+                            <h2
+                                style=" color: #3EDC24; display: block; width: fit-content; height: max-content; border-bottom:1px solid #3EDC24; padding: 3px;">
+                                Album</h2>
 
-                </div>
-            </div>
-
-
-        </section>
-
-        <section class="play-music  d-none row p-0 m-0">
-            <div class="col-3 author-infor d-flex justify-content-around align-items-center">
-                <div class="me-2">
-    
-                    <img class="image-song  " src="../images/lockaway.png" alt="">
-                </div>
-                <div class="text-white">
-                    <div class="fs-2  name-song">Vision</div>
-                    <div class="fs-5  author-song">Bella</div>
-    
-                </div>
-            </div>
-            <div class="col-xl-6 col-sm-9   text-white d-flex   align-items-center">
-                <div style="width: 100%;">
-                    <div class="col-12  d-flex justify-content-center align-items-center ">
-    
-                        <div class="current-time">00:00</div>
-                        <input type="range" min="1" max="100" value="0" class="pointer seek_slider ms-5 me-5">
-                        <div class="total-duration">00:00</div>
-                    </div>
-                    <div class="col-12 d-flex justify-content-center align-items-center">
-                  
-                         <div class="random-track me-3  pointer ms-3 fs-4">
-                            <i class="fa fa-heart"></i>
-                         </div>
-                         <div class="prev-track me-3  pointer ms-3 fs-4">
-                             <i class="fa fa-step-backward fa-xl" title="back"></i>
-                         </div>
-                         <div class="playpause-track me-3  pointer ms-3 fs-4" >
-                             <i class="fa fa-play-circle fa-2x play-song"></i>
-                             <i class="fa fa-pause-circle fa-2x d-none pause-song" ></i>
-                         </div>
-                         <div class="next-track me-3  pointer ms-3 fs-4">
-                             <i class="fa fa-step-forward fa-xl"></i>
-                         </div>
-                         <div class="repeat-track me-3  pointer ms-3 fs-4" >
-                             <i class="fa fa-repeat fa-xl" title="repeat"></i>
-                         </div>
-                    
+                            <ul class="list-top-songs" id="top-songs-list">
+                        </div>
                     </div>
                 </div>
-           
-    
-                    
             </div>
-            <div class="volume col-3 d-flex justify-content-center align-items-center">
-             
-                    <i class="fa fa-volume-down text-white fs-3 "></i>
-                    <input type="range" min="1" max="100" value="99" class="pointer volume_slider me-2 ms-2" onchange="setVolume()">
-                    <i class="fa fa-volume-up text-white fs-3"></i>
-            </div>
-        </section>
-    
-   
-
+            <script type="module" src="../js/action.js"></script>
 </body>
-<script type="module" src="../js/action.js"></script>
+
 </html>

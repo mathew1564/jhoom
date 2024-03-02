@@ -44,6 +44,18 @@
             style="height: 106px; position: fixed; top: 0; right: 0; background-color: #2B2828; justify-content: space-between!important; z-index: 99;">
             <a href="./home.html"><img src="../images/logo_nav.png" alt="logo" class=" img-logo"
                     id="logo-img-remove"></a>
+            <!-- <img src="../images/icon-menu-mobie.png" alt="" class="menu-icon-md">
+            <a href="./home.html"><img src="../images/JHOOM.png" alt="" class="menu-logo-md"></a> -->
+            <div class="info-name text-light fs-5">
+                <label>Hello, </label><label>Long</label>
+            </div>
+        </nav>
+    </section>
+    <section class="row nav-moblie">
+        <nav class=" container-fluid d-flex justify-content-center align-items-center"
+            style="height: 106px; position: fixed; top: 0; right: 0; background-color: #2B2828; justify-content: space-between!important; z-index: 99;">
+            <!-- <a href="./home.html"><img src="../images/logo_nav.png" alt="logo" class=" img-logo"
+                    id="logo-img-remove"></a> -->
             <img src="../images/icon-menu-mobie.png" alt="" class="menu-icon-md">
             <a href="./home.html"><img src="../images/JHOOM.png" alt="" class="menu-logo-md"></a>
             <div class="info-name text-light fs-5">
@@ -52,9 +64,9 @@
         </nav>
     </section>
     <!-- silde bar -->
-    <div class="container-fluid">
-        <section class="row silde-bar">
-            <div class="col-lg-2 col-md-0  text-light"
+    <div class="container-fluid  ">
+        <section class="row ">
+            <div class="col-lg-2 col-md-0 silde-bar text-light"
                 style="background-color: #2B2828; position: fixed; top:106px; left: 0; bottom: 0;">
                 <ul class="menu-nav mt-5">
                     <li>
@@ -145,8 +157,8 @@
             <div class="row">
                 <!-- Carousel -->
                 <div class="col-lg-2 col-md-0 col-sm-0 col-0 remove-element"></div>
-                <div class="col-lg-10 col-md-12 col-sm-12 col-12 " style="margin-top: 106px;">
-                    <div id="carouselExampleControls" class="carousel slide carousel1 " data-bs-ride="carousel">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-12 width-carousel-md" style="margin-top: 106px;">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="../images/banner4.jpg" class=" w-100" alt="...">
@@ -165,7 +177,6 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-
                     </div>
                     <nav class="navbar  col-12 col-lg-4 col-md-6 col-sm-6 ">
                         <form class="container-fluid">
@@ -179,23 +190,14 @@
                     </nav>
                     <div class="row">
                         <div class=" col-8  row g-4">
-                           <h2 style="color: #3EDC24;">TOP ALBUM</h2>
-                           <div class="row album">
-
-                              
-                           </div>
-            
-                           <h2 style="color: #3EDC24;">TOP ARTISTS</h2>
-                           <div class="row artirst">
-
-                           </div>
-            
+                            <h2 style="color: #3EDC24;">TOP ALBUM</h2>
+                            <div class="row album">
                             </div>
-            
 
-                         
-
-
+                            <h2 style="color: #3EDC24;">TOP ARTISTS</h2>
+                            <div class="row artirst">
+                            </div>
+                        </div>
                         <div class=" col-lg-4 col-md-12 col-sm-12 col-12 mt-5">
                             <div class="top-song p-3 ">
                                 <h2
@@ -205,7 +207,6 @@
                                 <ul class="list-top-songs" id="top-songs-list">
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -232,42 +233,44 @@
                     <div class="total-duration">00:00</div>
                 </div>
                 <div class="col-12 d-flex justify-content-center align-items-center">
-              
-                     <div class="random-track me-3  pointer ms-3 fs-4">
+
+                    <div class="random-track me-3  pointer ms-3 fs-4">
                         <i class="fa fa-heart"></i>
-                     </div>
-                     <div class="prev-track me-3  pointer ms-3 fs-4">
-                         <i class="fa fa-step-backward fa-xl" title="back"></i>
-                     </div>
-                     <div class="playpause-track me-3  pointer ms-3 fs-4" >
-                         <i class="fa fa-play-circle fa-2x play-song"></i>
-                         <i class="fa fa-pause-circle fa-2x d-none pause-song" ></i>
-                     </div>
-                     <div class="next-track me-3  pointer ms-3 fs-4">
-                         <i class="fa fa-step-forward fa-xl"></i>
-                     </div>
-                     <div class="repeat-track me-3  pointer ms-3 fs-4" >
-                         <i class="fa fa-repeat fa-xl" title="repeat"></i>
-                     </div>
-                
+                    </div>
+                    <div class="prev-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-step-backward fa-xl" title="back"></i>
+                    </div>
+                    <div class="playpause-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-play-circle fa-2x play-song"></i>
+                        <i class="fa fa-pause-circle fa-2x d-none pause-song"></i>
+                    </div>
+                    <div class="next-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-step-forward fa-xl"></i>
+                    </div>
+                    <div class="repeat-track me-3  pointer ms-3 fs-4">
+                        <i class="fa fa-repeat fa-xl" title="repeat"></i>
+                    </div>
+
                 </div>
             </div>
-       
 
-                
+
+
         </div>
         <div class="volume col-3 d-flex justify-content-center align-items-center">
-         
-                <i class="fa fa-volume-down text-white fs-3 "></i>
-                <input type="range" min="1" max="100" value="99" class="pointer volume_slider me-2 ms-2" onchange="setVolume()">
-                <i class="fa fa-volume-up text-white fs-3"></i>
+
+            <i class="fa fa-volume-down text-white fs-3 "></i>
+            <input type="range" min="1" max="100" value="99" class="pointer volume_slider me-2 ms-2"
+                onchange="setVolume()">
+            <i class="fa fa-volume-up text-white fs-3"></i>
         </div>
     </section>
 
-   
+
 </body>
-<script  type="module" src="../js/action.js"></script>
+<script type="module" src="../js/action.js"></script>
 <script>
-   
+
 </script>
+
 </html>

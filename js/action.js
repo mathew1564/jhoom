@@ -232,8 +232,8 @@ $(document).ready(function () {
     albums.map((item) => {
         $(".album")
             .append(` <div id="${item.id}" class="col-3 pointer song-album">
-        <div class="card h-70" style="background-color: black !important; border: none;">
-            <img src="../images/${item.image}" class="card-img-top" alt="...">
+        <div class="card h-70" style="background-color: black !important; border: none; height: 400px"  >
+            <img style="height:300px" src="../images/${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-light">${item.title}</h5>
                 <p class="card-text" style="color: gray;">${item.sub_title}</p>
@@ -245,12 +245,13 @@ $(document).ready(function () {
     $(".song-album").click((event) => {
         var parentElement = $(event.target).closest(".song-album");
         var id = parentElement.attr("id");
-        alert(id);
+        localStorage.setItem("albumId", id);
+        window.location.href = "albumDetail.html";
     });
     artists.map((item) => {
         $(".artirst").append(`  <div class="col-3 pointer">
-        <div class="card h-70" style="background-color: black !important; border: none;">
-            <img src="../images/${item.image}" class="card-img-top" alt="...">
+        <div class="card h-70" style="background-color: black !important; border: none ;height: 400px; ">
+            <img style="height:300px" src="../images/${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-light">${item.title}</h5>
                 <p class="card-text" style="color: gray;">${item.sub_title}</p>
@@ -258,28 +259,76 @@ $(document).ready(function () {
         </div>
     </div>`);
     });
-
-    topSongs.map((item) => {
-        $(".body-playlist")
-            .append(`  <tr class='pointer playlist-song' id="${item.id} ">
-        <td>
-            <img src="../images/${item.image}"
-                    alt="" width="50" style="border-radius: 5px; ">
-                <span class='ms-2'>${item.title}</span> 
-
-        </td>
-        <td>Chemical Reaction</td>
-        <td>3:10</td>
-        <td><i class="fa fa-heart" style="color: red; font-size: 24px;"></i></td>
-   
-    </tr>`);
+    let songFilter = [];
+    $(".form-search").change(() => {
+        console.log($(".form-search").val());
+        var value = $(".form-search").val();
+        songFilter = topSongs.filter((item) =>
+            item.title.toLowerCase().includes(value.toLowerCase())
+        );
+        if(songFilter.length > 0) {
+            $(".body-playlist").html("");
+            songFilter.map((item) => {
+                $(".body-playlist")
+                    .append(`  <tr class='pointer playlist-song' id="${item.id} ">
+                <td>
+                    <img src="../images/${item.image}"
+                            alt="" width="50" style="border-radius: 5px; ">
+                        <span class='ms-2'>${item.title}</span> 
+        
+                </td>
+                <td>Chemical Reaction</td>
+                <td>3:10</td>
+                <td><i class="fa fa-heart" style="color: red; font-size: 24px;"></i></td>
+           
+            </tr>`);
+            });
+        }
     });
+    if (songFilter.length == 0) {
+        topSongs.map((item) => {
+            $(".body-playlist")
+                .append(`  <tr class='pointer playlist-song' id="${item.id} ">
+            <td>
+                <img src="../images/${item.image}"
+                        alt="" width="50" style="border-radius: 5px; ">
+                    <span class='ms-2'>${item.title}</span> 
+    
+            </td>
+            <td>Chemical Reaction</td>
+            <td>3:10</td>
+            <td><i class="fa fa-heart" style="color: red; font-size: 24px;"></i></td>
+       
+        </tr>`);
+        });
+    }
 
     $(".playlist-song").click((event) => {
         var parentElement = $(event.target).closest(".playlist-song");
         var id = parentElement.attr("id");
         loadTrack(id);
         $(".play-music").removeClass("d-none");
+    });
+    var ablumItem = albums.filter(
+        (item) => item.id == localStorage.getItem("albumId")
+    )[0];
+    console.log(localStorage.getItem("albumId"), ablumItem);
+    $(".image-album-detail").attr("src", "../images/" + ablumItem.image);
+    $(".title-album-detail").html(ablumItem.title);
+    $(".date-album").html(ablumItem.date);
+    $(".people-name").html(ablumItem.creator);
+    $(".like").html(ablumItem.like + " like");
+    $(".image-artist").attr("src", "../images/" + ablumItem.imageArtist);
+    $(".artist-name").html(ablumItem.artists_name);
+
+    $(".btn-play").click(() => {
+        if (currentid) {
+            playpauseTrack();
+        } else {
+            currentid = "1";
+            $(".play-music").removeClass("d-none");
+            loadTrack(currentid);
+        }
     });
 });
 import { topSongs, albums, artists } from "../js/data.js";
@@ -297,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
         aElement.setAttribute("idsong", item.id);
         aElement.classList.add("song-item");
         imgElement.src = "../images/" + item.image;
+        imgElement.style.objectFit = "cover";
         imgElement.alt = "";
         imgElement.width = 40;
         spanSong.textContent = item.author + " - " + item.title;
@@ -323,3 +373,13 @@ document.getElementById("cancelLogout").addEventListener("click", function () {
     // Tắt popup nếu người dùng hủy bỏ
     document.getElementById("logoutPopup").style.display = "none";
 });
+
+//
+function changeColorLike() {
+    var heartIcon = document.getElementById("like");
+    if (heartIcon.style.color === "red") {
+        heartIcon.style.color = "#fcfcfc";
+    } else {
+        heartIcon.style.color = "red";
+    }
+}
