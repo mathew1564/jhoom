@@ -231,7 +231,7 @@ $(document).ready(function () {
     });
     albums.map((item) => {
         $(".album")
-            .append(` <div id="${item.id}" class="col-3 pointer song-album">
+            .append(` <div id="${item.id}" class="col-lg-3 col-6 col-sm-4 col-md-3  pointer song-album">
         <div class="card h-70" style="background-color: black !important; border: none;">
             <img src="../images/${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -248,7 +248,7 @@ $(document).ready(function () {
         alert(id);
     });
     artists.map((item) => {
-        $(".artirst").append(`  <div class="col-3 pointer">
+        $(".artirst").append(`  <div class="col-lg-3 col-6 col-sm-4 col-md-3  pointer">
         <div class="card h-70" style="background-color: black !important; border: none; ">
             <img src="../images/${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
