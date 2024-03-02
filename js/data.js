@@ -6,6 +6,11 @@ export const topSongs = [
         year: "2021",
         image: "stay.png",
         audio: "stay.mp3",
+        releaseDate:"01/03/2024",
+        providedBy:"JHOOM MUCSIC",
+        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672
+
     },
     {
         id: 2,
@@ -14,6 +19,10 @@ export const topSongs = [
         year: "2021",
         image: "memory.png",
         audio: "memory.mp3",
+        releaseDate:"01/03/2024",
+        providedBy:"JHOOM MUCSIC",
+        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672
     },
     {
         id: 3,
@@ -22,6 +31,10 @@ export const topSongs = [
         year: " 2015",
         image: "lockaway.png",
         audio: "lockaway.mp3",
+        releaseDate:"01/03/2024",
+        providedBy:"JHOOM MUCSIC",
+        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672
     },
     {
         id: 4,
@@ -30,6 +43,10 @@ export const topSongs = [
         year: " 2015",
         image: "headincloud.png",
         audio: "headincloud.mp3",
+        releaseDate:"01/03/2024",
+        providedBy:"JHOOM MUCSIC",
+        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672
     },
     {
         id: 5,
@@ -38,6 +55,10 @@ export const topSongs = [
         year: " 2015",
         image: "imyour.png",
         audio: "imyour.mp3",
+        releaseDate:"01/03/2024",
+        providedBy:"JHOOM MUCSIC",
+        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672
     },
 ];
 
@@ -47,6 +68,7 @@ export const albums = [
         image: "lockaway.png",
         title: "chill",
         sub_title: "The art of music",
+        
     },
     {
         id: "2",
@@ -94,3 +116,7 @@ export const artists = [
         sub_title: "The art of music",
     },
 ];
+
+export const songDeatail=[
+    {}
+]

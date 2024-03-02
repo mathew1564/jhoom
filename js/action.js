@@ -249,7 +249,7 @@ $(document).ready(function () {
     });
     artists.map((item) => {
         $(".artirst").append(`  <div class="col-3 pointer">
-        <div class="card h-70" style="background-color: black !important; border: none;">
+        <div class="card h-70" style="background-color: black !important; border: none; ">
             <img src="../images/${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title text-light">${item.title}</h5>
