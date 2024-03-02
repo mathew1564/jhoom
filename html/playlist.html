@@ -21,6 +21,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Playlist</title>
 </head>
 
@@ -234,34 +235,38 @@
                 </ul>
             </div>
         </section>
-        <div class="container-fluid">
+        <div class="container-fluid " style="margin-bottom: 100px;">
             <div class="row">
-                <div class="col-lg-2 col-md-0 col-sm-0 col-0 remove-element"></div>
-                <div class="col-lg-10" style="margin-top: 106px;">
-                    <img src="../images/banner1.jpg" alt="" class="w-100" style="height: 400px; object-fit: cover;">
-                    <form class="container-fluid mt-5 mb-5">
-                        <div class="row col-4">
-                            <div class="input-group ">
-                                <span class="input-group-text" id="basic-addon1"
-                                    style="background-color: rgba(255, 255, 255, 0) ; border: none;"><i
-                                        class="fa fa-search text-light"></i></span>
-                                <input type="text" class="form-control form-search " placeholder="Search">
-                            </div>
-                        </div>
-                    </form>
-                    <table class="table table-borderless table-playlist ">
-                        <thead>
-                            <tr style="border-bottom:1px solid #4d4c4c ;">
-                                <th scope="col">Title</th>
-                                <th scope="col">Album</th>
-                                <th scope="col">Duration</th>
-                                <th scope="col">Saved</th>
-                            </tr>
-                        </thead>
-                        <tbody class="body-playlist">
+                <div class="col-lg-2  remove-element"></div>
+                <div class="col-lg-10 col-md-12 col-sm-12 col-12 p-0" style="margin-top: 106px;">
+                    <img src="../images/banner1.jpg" alt="" class="w-100 banner__mobile"
+                        style="height: 400px; object-fit: cover;">
 
-                        </tbody>
-                    </table>
+                        <nav class="navbar  col-12 col-lg-5 col-md-6 col-sm-6 ">
+                            <form class="container-fluid">
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1"
+                                        style="background-color: rgba(255, 255, 255, 0) ; border: none;"><i
+                                            class="fa fa-search text-light"></i></span>
+                                    <input type="text" class="form-control form-search " placeholder="Search">
+                                </div>
+                            </form>
+                        </nav>
+                    <div style="overflow-x:auto;">
+                        <table class="table table-borderless table-playlist " >
+                            <thead>
+                                <tr style="border-bottom:1px solid #4d4c4c ;">
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Album</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Saved</th>
+                                </tr>
+                            </thead>
+                            <tbody class="body-playlist">
+    
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
             </div>

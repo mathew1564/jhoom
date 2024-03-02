@@ -6,11 +6,10 @@ export const topSongs = [
         year: "2021",
         image: "stay.png",
         audio: "stay.mp3",
-        releaseDate:"01/03/2024",
-        providedBy:"JHOOM MUCSIC",
-        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
-        personlikes: 672
-
+        releaseDate: "01/03/2024",
+        providedBy: "JHOOM MUCSIC",
+        lyrics: `I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672,
     },
     {
         id: 2,
@@ -19,10 +18,10 @@ export const topSongs = [
         year: "2021",
         image: "memory.png",
         audio: "memory.mp3",
-        releaseDate:"01/03/2024",
-        providedBy:"JHOOM MUCSIC",
-        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
-        personlikes: 672
+        releaseDate: "01/03/2024",
+        providedBy: "JHOOM MUCSIC",
+        lyrics: `I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672,
     },
     {
         id: 3,
@@ -31,10 +30,10 @@ export const topSongs = [
         year: " 2015",
         image: "lockaway.png",
         audio: "lockaway.mp3",
-        releaseDate:"01/03/2024",
-        providedBy:"JHOOM MUCSIC",
-        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
-        personlikes: 672
+        releaseDate: "01/03/2024",
+        providedBy: "JHOOM MUCSIC",
+        lyrics: `I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672,
     },
     {
         id: 4,
@@ -43,10 +42,10 @@ export const topSongs = [
         year: " 2015",
         image: "headincloud.png",
         audio: "headincloud.mp3",
-        releaseDate:"01/03/2024",
-        providedBy:"JHOOM MUCSIC",
-        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
-        personlikes: 672
+        releaseDate: "01/03/2024",
+        providedBy: "JHOOM MUCSIC",
+        lyrics: `I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672,
     },
     {
         id: 5,
@@ -55,68 +54,85 @@ export const topSongs = [
         year: " 2015",
         image: "imyour.png",
         audio: "imyour.mp3",
-        releaseDate:"01/03/2024",
-        providedBy:"JHOOM MUCSIC",
-        lyrics:`I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
-        personlikes: 672
+        releaseDate: "01/03/2024",
+        providedBy: "JHOOM MUCSIC",
+        lyrics: `I have one feeling (been dreaming) \n That you will finally come \n I have that feeling (been dreaming) \n And I know know that I'm rightOoh I wanna have that feelingOoh to be the only oneOoh \n I wanna have that feelingOoh to be the only one for youI have been waiting (praying) \n For you to finally showI have been waiting (praying) \n And I'm know that I'm rightBaby just for youI gotta vision of you`,
+        personlikes: 672,
     },
 ];
 
 export const albums = [
     {
         id: "1",
-        image: "lockaway.png",
-        title: "chill",
+        image: "playlist1.jpg",
+        title: "How I can say I love you",
         sub_title: "The art of music",
-        
+        date: "01/03/2024",
+        creator: " Mathew",
+        like: "30K",
+        imageArtist: "jason.jpg",
+        artists_name: "Jackson",
     },
     {
         id: "2",
-        image: "lockaway.png",
-        title: "chill",
-        sub_title: "The art of music",
+        image: "playlist2.jpg",
+        title: "Love you again",
+        sub_title: "The amazing of music",
+        date: "12/12/2022",
+        creator: " Mathew",
+        like: "60K",
+        imageArtist: "jason.jpg",
+        artists_name: "Jackson",
     },
     {
         id: "3",
-        image: "lockaway.png",
-        title: "chill",
-        sub_title: "The art of music",
+        image: "playlist3.jpg",
+        title: "Relaxing music",
+        sub_title: "Music for soul",
+        date: "12/12/2022",
+        creator: " Mathew",
+        like: "50K",
+        imageArtist: "jason.jpg",
+        artists_name: "Jackson",
     },
     {
         id: "4",
-        image: "lockaway.png",
-        title: "chill",
-        sub_title: "The art of music",
+        image: "playlist4.jpg",
+        title: "For the day",
+        sub_title: "Good vide ",
+        date: "12/12/2022",
+        creator: " Mathew",
+        like: "40K",
+        imageArtist: "jason.jpg",
+        artists_name: "Jackson",
     },
 ];
 
 export const artists = [
     {
         id: "1",
-        image: "lockaway.png",
+        image: "justin.jpg",
         title: "Justin Bieber",
         sub_title: "The art of music",
     },
     {
         id: "2",
-        image: "lockaway.png",
+        image: "jason.jpg",
         title: "Jason Mraz",
         sub_title: "The art of music",
     },
     {
         id: "3",
-        image: "lockaway.png",
+        image: "rock.jpg",
         title: "R. City",
         sub_title: "The art of music",
     },
     {
         id: "4",
-        image: "lockaway.png",
+        image: "marron.jpg",
         title: "Marron 5",
         sub_title: "The art of music",
     },
 ];
 
-export const songDeatail=[
-    {}
-]
+export const songDeatail = [{}];
