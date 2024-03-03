@@ -230,7 +230,21 @@ $(document).ready(function () {
         });
     });
     albums.map((item) => {
-        $(".album").append(` <div id="${item.id}" class="col-lg-3 col-6 col-sm-4 col-md-3 my-2 pointer song-album">
+        $(".album")
+            .append(` <div id="${item.id}" class="col-lg-3 col-6 col-sm-4 col-md-3 my-2 pointer song-album">
+        <div class="card card__items card-main" style="background-color: black !important; border: none; height:350px">
+            <img  src="../images/${item.image}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title text-light">${item.title}</h5>
+                <p class="card-text" style="color: gray;">${item.sub_title}</p>
+            </div>
+        </div>
+    </div>`);
+    });
+
+    topAlbums.map((item) => {
+        $(".top-ablum")
+            .append(` <div id="${item.id}" class="col-lg-3 col-6 col-sm-4 col-md-3 my-2 pointer song-album">
         <div class="card card__items card-main" style="background-color: black !important; border: none; height:350px">
             <img  src="../images/${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -248,7 +262,8 @@ $(document).ready(function () {
         window.location.href = "albumDetail.html";
     });
     artists.map((item) => {
-        $(".artirst").append(`  <div class="col-lg-3 col-6 col-sm-4 col-md-3 my-2 pointer">
+        $(".artirst")
+            .append(`  <div class="col-lg-3 col-6 col-sm-4 col-md-3 my-2 pointer">
         <div class="card card__items card-main" style="background-color: black !important; border: none ; height:350px">
             <img src="../images/${item.image}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -265,50 +280,76 @@ $(document).ready(function () {
         songFilter = topSongs.filter((item) =>
             item.title.toLowerCase().includes(value.toLowerCase())
         );
-        if(songFilter.length > 0) {
+        if (songFilter.length > 0) {
             $(".body-playlist").html("");
+
             songFilter.map((item) => {
-                $(".body-playlist")
-                    .append(`  <tr class='pointer playlist-song' id="${item.id} ">
-                <td>
-                    <img src="../images/${item.image}"
-                            alt="" width="50" height="50" style="border-radius: 5px; object-fit:cover ">
-                        <span class='ms-2'>${item.title}</span> 
-        
-                </td>
-                <td>Chemical Reaction</td>
-                <td>3:10</td>
-                <td><i class="fa fa-heart" style="color: red; font-size: 24px;"></i></td>
-           
-            </tr>`);
+                let track = document.createElement("audio");
+                track.src = "../audio/" + item.audio;
+
+                let duration;
+                track.addEventListener("loadedmetadata", () => {
+                    duration = track.duration;
+                    addItem(item, duration, track);
+                });
             });
+        } else {
+            $(".body-playlist").html("");
         }
     });
     if (songFilter.length == 0) {
         topSongs.map((item) => {
-            $(".body-playlist")
-                .append(`  <tr class='pointer playlist-song' id="${item.id} ">
-            <td>
-                <img src="../images/${item.image}"
-                        alt="" width="50" height="50" style="border-radius: 6px; object-fit:cover ">
-                    <span class='ms-2'>${item.title}</span> 
-    
-            </td>
-            <td>Chemical Reaction</td>
-            <td>3:10</td>
-            <td><i class="fa fa-heart" style="color: red; font-size: 24px;"></i></td>
-       
-        </tr>`);
+            let track = document.createElement("audio");
+            track.src = "../audio/" + item.audio;
+
+            let duration;
+            track.addEventListener("loadedmetadata", () => {
+                duration = track.duration;
+                addItem(item, duration, track);
+            });
         });
     }
 
-    $(".playlist-song").click((event) => {
+    const addItem = (item, duration, track) => {
+        if (duration) {
+            let seekPosition = track.currentTime * (100 / duration);
+            $(".seek_slider").val(seekPosition);
+
+            let durationMinutes = Math.floor(duration / 60);
+            let durationSeconds = Math.floor(duration - durationMinutes * 60);
+
+            if (durationSeconds < 10) {
+                durationSeconds = "0" + durationSeconds;
+            }
+            if (durationMinutes < 10) {
+                durationMinutes = "0" + durationMinutes;
+            }
+
+            duration = durationMinutes + ":" + durationSeconds;
+            console.log(duration);
+        }
+        $(".body-playlist")
+            .append(`  <tr class='pointer playlist-song' id="${item.id} ">
+        <td>
+            <img src="../images/${item.image}"
+                    alt="" width="50" height="50" style="border-radius: 6px; object-fit:cover ">
+                <span class='ms-2'>${item.title}</span> 
+
+        </td>
+        <td>Chemical Reaction</td>
+        <td class="duration">${duration}</td>
+        <td><i class="fa fa-heart" style="color: red; font-size: 24px;"></i></td>
+   
+    </tr>`);
+    };
+
+    $(".body-playlist").on("click", ".playlist-song", (event) => {
         var parentElement = $(event.target).closest(".playlist-song");
         var id = parentElement.attr("id");
         loadTrack(id);
         $(".play-music").removeClass("d-none");
     });
-    var ablumItem = albums.filter(
+    var ablumItem = allAlbums.filter(
         (item) => item.id == localStorage.getItem("albumId")
     )[0];
     console.log(localStorage.getItem("albumId"), ablumItem);
@@ -329,8 +370,25 @@ $(document).ready(function () {
             loadTrack(currentid);
         }
     });
+
+    $(".isLogout").click((e) => {
+        e.preventDefault();
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, logout!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "index.html";
+            }
+        });
+    });
 });
-import { topSongs, albums, artists } from "../js/data.js";
+import { topSongs, albums, artists, topAlbums, allAlbums } from "../js/data.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     var ulElement = document.getElementById("top-songs-list");
@@ -355,12 +413,6 @@ document.addEventListener("DOMContentLoaded", function () {
         liElement.appendChild(aElement);
         ulElement.appendChild(liElement);
     });
-});
-document.getElementById("isLogout").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    // Hiển thị popup khi nhấn Logout
-    document.getElementById("logoutPopup").style.display = "block";
 });
 
 document.getElementById("confirmLogout").addEventListener("click", function () {
