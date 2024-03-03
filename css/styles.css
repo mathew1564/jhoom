@@ -99,7 +99,7 @@
 }
 /* Search */
 
-.form-control::placeholder {
+.form-search::placeholder {
   color: #ffffff80; /* Set placeholder text color */
 }
 .form-search {
